@@ -1,0 +1,35 @@
+<resources>
+   <dimen name="launcher_size">72px</dimen>
+   <dimen name="textsize_verysmall">18px</dimen>
+   <dimen name="textsize_small">20px</dimen>
+   <dimen name="textsize_medium">24px</dimen>
+   <dimen name="textsize_large">32px</dimen>
+   <dimen name="fb_itemsize">112px</dimen>
+   <dimen name="fb_textsize">18px</dimen>
+   <dimen name="fb_textviewheight">63px</dimen>
+   <dimen name="imgviewer_itemsize">97px</dimen>
+   <dimen name="imgviewer_textsize">19px</dimen>
+   <dimen name="imgviewer_textviewheight">66px</dimen>
+   <dimen name="collectionitem_textsize">22px</dimen>
+   <dimen name="collectionitem_textviewheight">77px</dimen>
+   <dimen name="latest_textsize">20px</dimen>
+   <dimen name="latest_textviewheight">71px</dimen>
+   <dimen name="default_button_width">115px</dimen>
+   <dimen name="default_button_height">45px</dimen>
+   <dimen name="default_button_padding">10px</dimen>
+   <dimen name="default_button_textpadding">6px</dimen>
+   <dimen name="default_zoombutton_width">60px</dimen>
+   <dimen name="default_zoombutton_height">60px</dimen>
+   <dimen name="colorpicker_button_height">60px</dimen>
+   <dimen name="colorpicker_button_width">67px</dimen>
+   <dimen name="default_zoombutton_text_width">144px</dimen>
+   <dimen name="default_edittext_smallheight">50px</dimen>
+   <dimen name="default_edittext_mediumheight">60px</dimen>
+   <dimen name="default_edittext_largeheight">80px</dimen>
+   <dimen name="default_iconbutton_width">95px</dimen>
+   <dimen name="default_iconbutton_height">43px</dimen>
+   <dimen name="default_smallsquareiconbutton_size">43px</dimen>
+   <dimen name="notification_icon_small">32px</dimen>
+   <dimen name="padding_main">32px</dimen>
+   <dimen name="padding_main_double">64px</dimen>
+</resources>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.NoBackground" parent="android:Theme.NoTitleBar.Fullscreen">
+        <item name="android:windowBackground">@null</item>
+        <item name="android:windowSwipeToDismiss">false</item>
+    </style>
+    <style name="Theme.NoTitleBar" parent="ThemeOverlay.AppCompat.Dark" >
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+</resources>

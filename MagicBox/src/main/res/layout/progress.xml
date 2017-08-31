@@ -1,0 +1,27 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".MyActivity">
+
+    <benchmarkdos.doom.CircleProgressBar
+        android:id="@+id/custom_progressBar"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:progress="0"
+        app:progressBarThickness="6dp"/>
+
+    <TextView
+        android:id="@+id/progress_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textSize="15sp"
+        android:text="Updating..."
+        android:textColor="#00FF00"
+        android:layout_gravity="center_horizontal" />
+
+</LinearLayout>

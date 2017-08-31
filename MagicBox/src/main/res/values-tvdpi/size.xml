@@ -1,0 +1,19 @@
+<resources>
+   <dimen name="launcher_size">64px</dimen>
+   <dimen name="addwidget_imgsize">84px</dimen>
+   <dimen name="addwidget_defcontainerwidth">210px</dimen>
+   <dimen name="gamepprofile_soundbutton_width">252px</dimen>
+   <dimen name="gamepprofile_midibutton_width">163px</dimen>
+   <dimen name="gamepprofile_gusbutton_width">88px</dimen>
+   <dimen name="gamepprofile_parambutton_width">49px</dimen>
+   <dimen name="gamepprofile_cpubutton_width">252px</dimen>
+   <dimen name="gamepprofile_membutton_width">58px</dimen>
+   <dimen name="gamepprofile_memtext_width">96px</dimen>
+   <dimen name="gamepprofile_ipxbutton_width">84px</dimen>
+   <dimen name="gamepprofile_modembutton_width">168px</dimen>
+   <dimen name="keybrowser_keycodes_size">89px</dimen>
+   <dimen name="keybrowser_drives_size">76px</dimen>
+   <dimen name="edit_port_width">83px</dimen>
+   <dimen name="edit_ip_width">128px</dimen>
+   <dimen name="edit_port_padding">64px</dimen>
+</resources>

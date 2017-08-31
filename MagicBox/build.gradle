@@ -1,0 +1,95 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion '23.0.2'
+
+    defaultConfig {
+        applicationId "benchmarkdos.doom"
+        minSdkVersion 8
+        targetSdkVersion 21
+
+        ndk {
+            moduleName "dosbox_main"
+        }
+    }
+
+    sourceSets.main {
+        jni.srcDirs = [] // This prevents the auto generation of Android.mk
+        jniLibs.srcDir 'src/main/libs' // This is not necessary unless you have precompiled libraries in your project.
+    }
+
+    task buildNative(type: Exec, description: 'Compile JNI source via NDK') {
+        commandLine "/home/UX/workspace/android-ndk/ndk-build",
+                '-C', file('src/main/jni').absolutePath, // Change src/main/jni the relative path to your jni source
+                '-j', Runtime.runtime.availableProcessors(),
+                'all',
+                'NDK_DEBUG=0'
+    }
+
+    task cleanNative(type: Exec, description: 'Clean JNI object files') {
+        commandLine "/home/UX/workspace/android-ndk/ndk-build",
+                '-C', file('src/main/jni').absolutePath, // Change src/main/jni the relative path to your jni source
+                'clean'
+    }
+
+    clean.dependsOn 'cleanNative'
+
+    tasks.withType(JavaCompile) {
+        compileTask -> compileTask.dependsOn buildNative
+    }
+
+    buildTypes {
+        debug {
+
+        }
+
+        release {
+            applicationVariants.all { variant ->
+                variant.outputs.each { output ->
+                    output.outputFile = new File(output.outputFile.parent, "benchmarkdos.apk")
+                }
+            }
+        }
+    }
+}
+
+dependencies {
+    compile project(':magiclib')
+}
+
+/*
+/*
+apply plugin: 'com.android.model.application'
+
+model {
+    android {
+        compileSdkVersion = 22
+        buildToolsVersion = "22.0.1"
+
+        defaultConfig.with {
+            applicationId = "benchmarkdos.doom"
+            minSdkVersion.apiLevel = 8
+            targetSdkVersion.apiLevel = 22
+        }
+        android.ndk {
+            moduleName "dosbox_main"
+        }
+        android.buildTypes {
+            debug {
+                jniDebuggable = true
+            }
+        }
+        // Configures source set directory.
+        android.sources {
+            main {
+                java {
+                    source {
+                        srcDir 'src'
+                    }
+                }
+            }
+        }
+    }
+}
+*/
