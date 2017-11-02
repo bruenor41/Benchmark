@@ -26,18 +26,6 @@ src/ints \
 src/libs \
 src/misc \
 src/shell \
-../shared/thread \
-../shared/thread/pthread \
-../shared/libogg \
-../shared/libvorbis \
-../shared/sdlsound \
-../shared/sdlsound/decoders \
-../shared/sdlsound/decoders/timidity \
-../shared/sdlsound/decoders/mpglib \
-../shared/mt32emu/src \
-../shared/mt32emu/src/sha1 \
-../shared/fluidsynth \
-../shared/fluidsynth/include \
 
 $(info $(CG_SUBDIRS))
 

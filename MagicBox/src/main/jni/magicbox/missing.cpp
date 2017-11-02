@@ -71,16 +71,16 @@ void isoDrive::Activate(void) {}*/
 #include "SDL.h"
 #include "SDL_thread.h"
 #include "mapper.h"
-/*
+
 struct SDL_mutex {
 	int recursive;
 	Uint32 owner;
 	SDL_sem *sem;
-};*/
+};
 
-//#define SDL_malloc	malloc
-//#define SDL_free	free
-/*
+#define SDL_malloc	malloc
+#define SDL_free	free
+
 extern DECLSPEC SDL_mutex * SDLCALL SDL_CreateMutex(void) {
 	SDL_mutex *mutex;
 
@@ -107,10 +107,10 @@ extern DECLSPEC void SDLCALL SDL_DestroyMutex(SDL_mutex *mutex) {
 		}
 		SDL_free(mutex);
 	}
-}*/
+}
 
-//extern DECLSPEC int SDLCALL SDL_mutexP(SDL_mutex *mutex) {return 0;}
-//extern DECLSPEC int SDLCALL SDL_mutexV(SDL_mutex *mutex) {return 0;}
+extern DECLSPEC int SDLCALL SDL_mutexP(SDL_mutex *mutex) {return 0;}
+extern DECLSPEC int SDLCALL SDL_mutexV(SDL_mutex *mutex) {return 0;}
 
 //extern DECLSPEC SDL_Overlay * SDLCALL SDL_CreateYUVOverlay(int width, int height, Uint32 format, SDL_Surface *display){return NULL;}
 //extern DECLSPEC void SDLCALL SDL_FreeYUVOverlay(SDL_Overlay* surface){}
