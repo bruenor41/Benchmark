@@ -1,6 +1,6 @@
 include $(CLEAR_VARS)
 
-LOCAL_PATH := /home/UX/AndroidStudioProjects/Benchmark/magiclib/src/main/jni/magiclib
+LOCAL_PATH := d:\Projects\AndroidStudio\DoomBenchmark\Benchmark\magiclib\src\main\jni\magiclib
 LOCAL_MODULE    := magiclib
 CG_SUBDIRS := \
 

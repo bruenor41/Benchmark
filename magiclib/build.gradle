@@ -2,7 +2,7 @@ apply plugin: 'com.android.library'
 
 android {
     compileSdkVersion 23
-    buildToolsVersion "23.0.2"
+    buildToolsVersion '28.0.3'
 
     sourceSets.main {
         jni.srcDirs = [] // This prevents the auto generation of Android.mk
@@ -10,7 +10,7 @@ android {
     }
 
     task buildNative(type: Exec, description: 'Compile JNI source via NDK') {
-        commandLine "/home/UX/workspace/android-ndk/ndk-build",
+        commandLine "c:\\android-ndk\\ndk-build.cmd",
                 '-C', file('src/main/jni').absolutePath, // Change src/main/jni the relative path to your jni source
                 '-j', Runtime.runtime.availableProcessors(),
                 'all',
@@ -18,7 +18,7 @@ android {
     }
 
     task cleanNative(type: Exec, description: 'Clean JNI object files') {
-        commandLine "/home/UX/workspace/android-ndk/ndk-build",
+        commandLine "c:\\android-ndk\\ndk-build.cmd",
                 '-C', file('src/main/jni').absolutePath, // Change src/main/jni the relative path to your jni source
                 'clean'
     }
@@ -39,9 +39,12 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    defaultConfig {
+        minSdkVersion = 14
+    }
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile 'com.android.support:appcompat-v7:22.2.0'
+    api fileTree(dir: 'libs', include: ['*.jar'])
+    api 'com.android.support:appcompat-v7:22.2.0'
 }
