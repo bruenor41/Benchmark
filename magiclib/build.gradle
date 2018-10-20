@@ -1,8 +1,12 @@
 apply plugin: 'com.android.library'
 
 android {
-    compileSdkVersion 23
+    compileSdkVersion 26
     buildToolsVersion '28.0.3'
+
+    defaultConfig {
+        minSdkVersion 14
+    }
 
     sourceSets.main {
         jni.srcDirs = [] // This prevents the auto generation of Android.mk
@@ -39,12 +43,9 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
-    defaultConfig {
-        minSdkVersion = 14
-    }
 }
 
 dependencies {
     api fileTree(dir: 'libs', include: ['*.jar'])
-    api 'com.android.support:appcompat-v7:22.2.0'
+    api 'com.android.support:appcompat-v7:23.4.0'
 }

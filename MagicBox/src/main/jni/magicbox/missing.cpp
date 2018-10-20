@@ -19,6 +19,7 @@
 #include "dosbox.h"
 #include "dos/drives.h"
 #include "loader.h"
+#include <time.h>
 
 #if 1
 

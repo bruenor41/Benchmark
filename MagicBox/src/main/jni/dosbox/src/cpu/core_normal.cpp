@@ -138,7 +138,7 @@ static INLINE Bit32u Fetchd() {
 
 #include "instructions.h"
 #include "core_normal/support.h"
-#include "core_normal/string.h"
+#include "core_normal/cpustring.h"
 
 
 #define EALookupTable (core.ea_table)

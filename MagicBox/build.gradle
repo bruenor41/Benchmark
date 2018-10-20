@@ -1,13 +1,13 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 23
+    compileSdkVersion 26
     buildToolsVersion '28.0.3'
 
     defaultConfig {
         applicationId "benchmarkdos.doom"
         minSdkVersion 14
-        targetSdkVersion 21
+        targetSdkVersion 26
 
         ndk {
             moduleName "dosbox_main"

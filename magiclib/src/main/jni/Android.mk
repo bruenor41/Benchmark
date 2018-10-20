@@ -4,10 +4,6 @@ LOCAL_PATH := d:\Projects\AndroidStudio\DoomBenchmark\Benchmark\magiclib\src\mai
 LOCAL_MODULE    := magiclib
 CG_SUBDIRS := \
 
-ifeq ($(TARGET_ARCH_ABI),armeabi)
-	LOCAL_CFLAGS = -DLIB_ARMEABI
-endif
-
 ifeq ($(TARGET_ARCH_ABI),x86)
 	LOCAL_CFLAGS = -DLIB_X86
 endif

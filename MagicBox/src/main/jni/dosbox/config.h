@@ -23,6 +23,8 @@
 /* Define if building universal (internal helper macro) */
 #undef AC_APPLE_UNIVERSAL_BUILD
 
+#define HAVE_CLOCK_GETTIME 1
+
 /* Compiling on BSD */
 /* #undef BSD */
 
